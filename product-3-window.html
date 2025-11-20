@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500&display=swap"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+            defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style>
+                .footer-social-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: currentColor;
+    color: #38b2ac;
+    margin-right: .5rem;
+    opacity: .5;
+}
+            </style>
+
+    </head>
+
+    <body class="font-light text-gray-800">
+        <!-- nav -->
+        <nav class="sticky top-0 bg-white shadow-lg z-50"
+            x-data="{ mobileMenu: false, productOpen: false }">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+
+                    <!-- Logo -->
+                    <a href="/" class="flex-shrink-0">
+                        <div class="bg-gray-500 w-32 h-12 rounded"></div>
+                        <!-- 換成你的真實 logo -->
+                    </a>
+
+                    <!-- 電腦版選單 -->
+                    <ul class="hidden md:flex items-center space-x-8">
+                        <li><a href="#"
+                                class="text-gray-700 font-medium hover:text-cyan-700 transition">首頁</a></li>
+
+                        <!-- 電腦版下拉選單 -->
+                        <li class="relative" x-data="{ open: false }"
+                            @click.outside="open = false">
+                            <button @click="open = !open"
+                                class="flex items-center text-gray-700 font-medium hover:text-cyan-700 transition">
+                                所有產品
+                                <svg class="w-4 h-4 ml-1 transition-transform"
+                                    :class="open ? 'rotate-180' : ''"
+                                    fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <ul x-show="open" x-transition
+                                class="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 z-50">
+                                <li><a href="#三合一通風門"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">三合一通風門</a></li>
+                                <li><a href="#玄關門"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">玄關門</a></li>
+                                <li><a href="#氣密窗"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">氣密窗</a></li>
+                                <li><a href="#防火門"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">防火門</a></li>
+                                <li><a href="#金屬門"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">金屬門</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#聯絡我們"
+                                class="text-gray-700 font-medium hover:text-cyan-700 transition">聯絡我們</a></li>
+                    </ul>
+
+                    <!-- 手機版漢堡按鈕 -->
+                    <button
+                        @click="mobileMenu = !mobileMenu; productOpen = false"
+                        class="md:hidden z-50">
+                        <svg class="w-7 h-7"
+                            :class="mobileMenu ? 'hidden' : 'block'" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="w-7 h-7"
+                            :class="mobileMenu ? 'block' : 'hidden'" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 手機側邊欄（與 nav 同一個元素內） -->
+            <div x-show="mobileMenu"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 -translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-40 overflow-y-auto md:hidden">
+
+                <div class="p-6">
+
+                    <ul class="space-y-1">
+                        <li><a href="#" @click="mobileMenu = false"
+                                class="block py-4 text-xl text-gray-700 hover:text-cyan-700">首頁</a></li>
+
+                        <!-- 手機版「所有產品」可展開 -->
+                        <li>
+                            <button @click="productOpen = !productOpen"
+                                class="w-full flex justify-between items-center py-4 text-xl text-gray-700 hover:text-cyan-700">
+                                所有產品
+                                <svg class="w-6 h-6 transition-transform"
+                                    :class="productOpen ? 'rotate-180' : ''"
+                                    fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <ul x-show="productOpen" x-transition
+                                class="bg-gray-50 rounded-lg overflow-hidden ml-4">
+                                <li><a href="#三合一通風門"
+                                        @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">三合一通風門</a></li>
+                                <li><a href="#玄關門" @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">玄關門</a></li>
+                                <li><a href="#氣密窗" @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">氣密窗</a></li>
+                                <li><a href="#防火門" @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">防火門</a></li>
+                                <li><a href="#金屬門" @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">金屬門</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#聯絡我們" @click="mobileMenu = false"
+                                class="block py-4 text-xl text-gray-700 hover:text-cyan-700">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 點背景關閉（可選） -->
+            <div x-show="mobileMenu"
+                @click="mobileMenu = false"
+                class="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"></div>
+        </nav>
+        <header class="container mx-auto">
+            <div class="bg-cyan-800 rounded w-full header-img"></div>
+        </header>
+
+        <!-- 3. 正新氣密窗 -->
+        <section class="py-12 sm:py-20 bg-white">
+            <div class="container px-4 sm:px-0 mx-auto max-w-6xl">
+                <div class="flex justify-center mb-10">
+                    <h3
+                        class="section-heading flex items-baseline text-2xl sm:text-3xl font-bold text-gray-800">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="16">
+                            <g fill="#16537e"><path d="M20 0h20v5H20z" /><path
+                                    d="M0 11h40v5H0z" /></g>
+                        </svg>
+                        正新氣密窗
+                    </h3>
+                </div>
+                <!-- 內容結構完全相同，只換文字與背景色交替 -->
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                    <div class="lg:col-span-5">
+                        <div class="space-y-4">
+                            <div
+                                class="bg-cyan-800 rounded-lg overflow-hidden shadow-lg h-96"></div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-cyan-400 rounded-lg h-48"></div>
+                                <div class="bg-cyan-400 rounded-lg h-48"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-10">
+                        <div><h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 mb-4">產品介紹</h4><p
+                                class="text-gray-700 leading-relaxed text-base sm:text-lg">正新氣密窗是正新鋁業的旗艦隔音窗系列（如PL892/PL192），採用斷熱鋁合金框架與複層玻璃，專為噪音嚴重環境設計。具高氣密與水密性能，主要用於住宅窗戶，阻隔交通噪音、雨水滲漏，同時維持良好採光，適合都市公寓或路邊住宅。</p></div>
+                        <div><h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 mb-6">產品特色</h4><div
+                                class="grid sm:grid-cols-2 gap-6">
+                                <div class="flex"><div
+                                        class="w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">1</div><div
+                                        class="ml-4"><h5
+                                            class="font-semibold text-gray-800">優異隔音</h5><p
+                                            class="text-gray-600 mt-1">達35dB隔音等級，搭配5+5mm膠合玻璃，有效降低室外噪音。</p></div></div>
+                                <div class="flex"><div
+                                        class="w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">2</div><div
+                                        class="ml-4"><h5
+                                            class="font-semibold text-gray-800">防水抗風</h5><p
+                                            class="text-gray-600 mt-1">水密50kgf/m²、抗風壓360kgf/m²，防颱風雨滲漏。</p></div></div>
+                                <div class="flex"><div
+                                        class="w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">3</div><div
+                                        class="ml-4"><h5
+                                            class="font-semibold text-gray-800">氣密節能</h5><p
+                                            class="text-gray-600 mt-1">2級氣密設計，減少空氣流失，降低冷氣耗電。</p></div></div>
+                                <div class="flex"><div
+                                        class="w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">4</div><div
+                                        class="ml-4"><h5
+                                            class="font-semibold text-gray-800">美觀耐用</h5><p
+                                            class="text-gray-600 mt-1">牙白色或香檳色選項，表面防腐處理，壽命長。</p></div></div>
+                            </div></div>
+                        <div><h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 mb-6">常見問題</h4><div
+                                class="space-y-4">
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer"><summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">報價合理嗎？
+                                        <svg class="w-5 h-5 transition"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg></summary><p
+                                        class="mt-3 text-gray-600">單片約1.5-2萬元（含安裝），舊窗拆除加收約0.5萬元。</p></details>
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer"><summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">隔音效果持久？
+                                        <svg class="w-5 h-5 transition"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg></summary><p
+                                        class="mt-3 text-gray-600">是，但需定期檢查密封條；升級8mm玻璃可達40dB。</p></details>
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer"><summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">安裝時間長？
+                                        <svg class="w-5 h-5 transition"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg></summary><p
+                                        class="mt-3 text-gray-600">約半天，乾式包框施工不需破牆。</p></details>
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer"><summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">顏色會褪？
+                                        <svg class="w-5 h-5 transition"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg></summary><p
+                                        class="mt-3 text-gray-600">粉末塗裝耐候，保固5-10年。</p></details>
+                            </div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 sm:py-16 bg-gray-800 text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap mx-0 sm:-mx-6">
+                    <div class="w-full sm:w-6/12 px-0 sm:px-6">
+                        <h3
+                            class="pb-4 text-xl font-medium border-b border-cyan-300">
+                            網站地圖
+                        </h3>
+                        <div class="flex -mx-2">
+                            <div class="w-1/2 pt-4 px-2">
+                                <ul>
+                                    <li>首頁</li>
+                                    <li>公司介紹</li>
+                                    <li>所有產品</li>
+                                    <li>教學文章</li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 pt-4 px-2 flex">
+                                <svg class="h-10 w-10 mr-2"
+                                    viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M483.738 0h-455.5C12.641.008-.004 12.66 0 28.262v455.5C.008 499.359 12.66 512.004 28.262 512h455.476c15.606.004 28.258-12.645 28.262-28.25V28.238C511.992 12.641 499.34-.004 483.738 0zm0 0"
+                                        fill="#4267b2" />
+                                    <path
+                                        d="M353.5 512V314h66.75l10-77.5H353.5v-49.36c0-22.386 6.215-37.64 38.316-37.64H432.5V80.371c-7.078-.941-31.363-3.047-59.621-3.047-59 0-99.379 36-99.379 102.14V236.5H207V314h66.5v198zm0 0"
+                                        fill="#fff" />
+                                </svg>
+
+                                <svg class="h-10 w-10 mr-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 455.731 455.731">
+                                    <path fill="#00c200"
+                                        d="M0 0h455.731v455.731H0z" />
+                                    <path
+                                        d="M393.272 219.605c.766-4.035 1.145-7.43 1.319-10.093.288-4.395-.04-10.92-.157-12.963-4.048-70.408-77.096-126.503-166.616-126.503-92.118 0-166.793 59.397-166.793 132.667 0 67.346 63.088 122.97 144.821 131.526 4.997.523 8.6 5.034 8.046 10.027l-3.48 31.322c-.79 7.11 6.562 12.283 13.005 9.173 69.054-33.326 110.346-67.611 135.004-97.314 4.487-5.405 19.118-25.904 22.101-31.288 6.332-11.43 10.697-23.704 12.75-36.554z"
+                                        fill="#fff" />
+                                    <path
+                                        d="M136.103 229.588v-55.882a8.532 8.532 0 00-17.064 0v64.414a8.532 8.532 0 008.532 8.532h34.127a8.532 8.532 0 000-17.064h-25.595zM188.731 246.652h-3.73a6.667 6.667 0 01-6.667-6.667v-68.144a6.667 6.667 0 016.667-6.667h3.73a6.667 6.667 0 016.667 6.667v68.144a6.667 6.667 0 01-6.667 6.667zM257.678 173.706v39.351s-34.073-44.443-34.593-45.027a8.493 8.493 0 00-6.69-2.85c-4.641.176-8.2 4.232-8.2 8.876v64.063a8.532 8.532 0 0017.064 0v-39.112s34.591 44.83 35.099 45.312a8.481 8.481 0 005.773 2.332c4.738.043 8.611-4.148 8.611-8.886v-64.059a8.533 8.533 0 00-17.064 0zM338.729 173.706a8.532 8.532 0 00-8.532-8.532H296.07a8.532 8.532 0 00-8.532 8.532v64.414a8.532 8.532 0 008.532 8.532h34.127a8.532 8.532 0 000-17.064h-25.595v-15.144h25.595a8.532 8.532 0 000-17.064h-25.595v-15.144h25.595a8.53 8.53 0 008.532-8.53z"
+                                        fill="#00c500" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full mt-6 sm:mt-0 sm:w-6/12 px-0 sm:px-6">
+                        <h3
+                            class="pb-4 text-xl font-medium border-b border-cyan-300">
+                            聯絡我們
+                        </h3>
+                        <ul class="pt-4">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    class="footer-social-icon">
+                                    <path
+                                        d="M10 20S3 10.87 3 7a7 7 0 1114 0c0 3.87-7 13-7 13zm0-11a2 2 0 100-4 2 2 0 000 4z" />
+                                </svg>
+                                高雄市大寮區鳳林三路143號
+                            </li>
+                            <li class="flex items-center mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="footer-social-icon"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M20 18.35V19a1 1 0 01-1 1h-2A17 17 0 010 3V1a1 1 0 011-1h4a1 1 0 011 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 01.99 1v3.35z" />
+                                </svg>
+
+                                0938-619-028
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="bg-blackblue py-2">
+                <h6 class="text-center text-blue-600 text-sm">2020 © Copyright
+                    Heng Yi All rights Reserved.</h6>
+            </div>
+
+            <script>
+        function toggleMenu() {
+            var navMenu = document.querySelector("#responsive");
+            navMenu.classList.toggle("hidden");
+        }
+
+    </script>
+        </body>
+
+    </html>
