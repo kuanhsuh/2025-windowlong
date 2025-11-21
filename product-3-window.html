@@ -9,22 +9,13 @@
         <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500&display=swap"
             rel="stylesheet" />
+        <!-- Lightbox Plugin -->
+        <script defer
+            src="https://cdn.jsdelivr.net/npm/alpine-tailwind-lightbox@1.x.x/dist/alpine-tailwind-lightbox.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-        <style>
-                .footer-social-icon {
-    height: 1.25rem;
-    width: 1.25rem;
-    fill: currentColor;
-    color: #38b2ac;
-    margin-right: .5rem;
-    opacity: .5;
-}
-            </style>
+        <link rel="stylesheet" href="output.css">
 
     </head>
 
@@ -265,6 +256,48 @@
                                         class="mt-3 text-gray-600">粉末塗裝耐候，保固5-10年。</p></details>
                             </div></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 施工照片 -->
+        <section class="py-8 sm:py-16 bg-gray-200">
+            <div class="container px-4 sm:px-0 mx-auto">
+                <div class="flex justify-center">
+                    <h3 class="section-heading flex items-baseline">
+                        <svg class="mr-2" xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="16">
+                            <g data-name="Group 32">
+                                <g data-name="Group 31" fill="#16537e">
+                                    <path data-name="Rectangle 58"
+                                        d="M20 0h20v5H20z" />
+                                    <path data-name="Path 5"
+                                        d="M0 11h40v5H0z" />
+                                </g>
+                            </g>
+                        </svg>施工照片</h3>
+                </div>
+
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mb-6"
+                    x-data="{
+    images: [
+        { url: './img/三合一通風門-1.jpg', thumb: './img/三合一通風門-1.jpg' },
+        { url: './img/三合一通風門-2.jpg', thumb: './img/三合一通風門-2.jpg' },
+        { url: './img/三合一通風門-3.jpg', thumb: './img/三合一通風門-3.jpg' },
+        { url: './img/三合一通風門-4.jpg', thumb: './img/三合一通風門-4.jpg' },
+    ],
+}">
+                    <template x-for="image in images">
+                        <a
+                            href="#"
+                            class="aspect-square flex rounded-md overflow-hidden hover:opacity-80 transition-opacity"
+                            x-lightbox="image.url"
+                            x-lightbox:group="multiple">
+                            <img class="flex-1 object-cover object-center"
+                                :src="image.thumb" alt>
+                        </a>
+                    </template>
                 </div>
             </div>
         </section>
