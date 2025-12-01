@@ -9,9 +9,6 @@
         <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500&display=swap"
             rel="stylesheet" />
-        <!-- Lightbox Plugin -->
-        <script defer
-            src="https://cdn.jsdelivr.net/npm/alpine-tailwind-lightbox@1.x.x/dist/alpine-tailwind-lightbox.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer></script>
@@ -230,25 +227,32 @@
                 </div>
 
                 <div
-                    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mb-6"
-                    x-data="{
-    images: [
-        { url: './img/三合一通風門-1.jpg', thumb: './img/三合一通風門-1.jpg' },
-        { url: './img/三合一通風門-2.jpg', thumb: './img/三合一通風門-2.jpg' },
-        { url: './img/三合一通風門-3.jpg', thumb: './img/三合一通風門-3.jpg' },
-        { url: './img/三合一通風門-4.jpg', thumb: './img/三合一通風門-4.jpg' },
-    ],
-}">
-                    <template x-for="image in images">
-                        <a
-                            href="#"
-                            class="aspect-square flex rounded-md overflow-hidden hover:opacity-80 transition-opacity"
-                            x-lightbox="image.url"
-                            x-lightbox:group="multiple">
-                            <img class="flex-1 object-cover object-center"
-                                :src="image.thumb" alt>
-                        </a>
-                    </template>
+                    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mb-6">
+                    <!-- Create links -->
+                    <a data-fslightbox="gallery" href="./img/電子鎖-1.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-1.jpg" alt="電子鎖-1">
+                    </a>
+                    <a data-fslightbox="gallery" href="./img/電子鎖-2.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-2.jpg" alt="電子鎖-2">
+                    </a>
+                    <a data-fslightbox="gallery" href="./img/電子鎖-3.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-3.jpg" alt="電子鎖-3">
+                    </a>
+                    <a data-fslightbox="gallery" href="./img/電子鎖-4.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-4.jpg" alt="電子鎖-4">
+                    </a>
+                    <a data-fslightbox="gallery" href="./img/電子鎖-5.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-5.jpg" alt="電子鎖-5">
+                    </a>
+                    <a data-fslightbox="gallery" href="./img/電子鎖-6.jpg"
+                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
+                        <img src="./img/電子鎖-6.jpg" alt="電子鎖-6">
+                    </a>
                 </div>
             </div>
         </section>
@@ -334,13 +338,8 @@
                     Heng Yi All rights Reserved.</h6>
             </div>
 
-            <script>
-        function toggleMenu() {
-            var navMenu = document.querySelector("#responsive");
-            navMenu.classList.toggle("hidden");
-        }
-
-    </script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/fslightbox@3.7.4/index.min.js"></script>
         </body>
 
     </html>
