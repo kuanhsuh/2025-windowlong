@@ -7,8 +7,8 @@
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer></script>
         <script
-            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-            defer></script>
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
         <link rel="stylesheet" href="output.css">
 
     </head>
@@ -22,8 +22,8 @@
 
                     <!-- Logo -->
                     <a href="/" class="flex-shrink-0">
-                        <div class="bg-gray-500 w-32 h-12 rounded"></div>
-                        <!-- 換成你的真實 logo -->
+                        <img src="./img/logo.png" alt="恆易有限公司 Logo"
+                            class="h-12">
                     </a>
 
                     <!-- 電腦版選單 -->
@@ -49,16 +49,16 @@
 
                             <ul x-show="open" x-transition
                                 class="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 z-50">
-                                <li><a href="#三合一通風門"
+                                <li><a href="/product-1-3-1door.html"
                                         class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">三合一通風門</a></li>
-                                <li><a href="#玄關門"
+                                <li><a href="/product-2-main-door.html"
                                         class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">玄關門</a></li>
-                                <li><a href="#氣密窗"
+                                <li><a href="/product-3-window.html"
                                         class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">氣密窗</a></li>
-                                <li><a href="#防火門"
+                                <li><a href="/product-4-fire-door.html"
                                         class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">防火門</a></li>
-                                <li><a href="#金屬門"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">金屬門</a></li>
+                                <li><a href="/product-5-room-door.html"
+                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">房間金屬門</a></li>
                             </ul>
                         </li>
 
@@ -118,17 +118,21 @@
 
                             <ul x-show="productOpen" x-transition
                                 class="bg-gray-50 rounded-lg overflow-hidden ml-4">
-                                <li><a href="#三合一通風門"
+                                <li><a href="/product-1-3-1door.html"
                                         @click="mobileMenu = false"
                                         class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">三合一通風門</a></li>
-                                <li><a href="#玄關門" @click="mobileMenu = false"
+                                <li><a href="/product-2-main-door.html"
+                                        @click="mobileMenu = false"
                                         class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">玄關門</a></li>
-                                <li><a href="#氣密窗" @click="mobileMenu = false"
+                                <li><a href="/product-3-window.html"
+                                        @click="mobileMenu = false"
                                         class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">氣密窗</a></li>
-                                <li><a href="#防火門" @click="mobileMenu = false"
+                                <li><a href="/product-4-fire-door.html"
+                                        @click="mobileMenu = false"
                                         class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">防火門</a></li>
-                                <li><a href="#金屬門" @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">金屬門</a></li>
+                                <li><a href="/product-5-room-door.html"
+                                        @click="mobileMenu = false"
+                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">房間金屬門</a></li>
                             </ul>
                         </li>
 
@@ -145,7 +149,7 @@
         </nav>
 
         <header class="container mx-auto">
-            <div class="bg-cyan-800 rounded w-full header-img"></div>
+            <img src="./img/header.jpg" alt>
         </header>
 
         <!-- 關於我們 -->
@@ -505,118 +509,172 @@
                 </div>
             </div>
         </section>
-        <section class="relative py-20 bg-gray-50 overflow-hidden">
-            <!-- 背景圖（請替換成你的實際圖片） -->
-            <div class="absolute inset-0">
-                <img src="your-background-image.jpg" alt="背景"
-                    class="w-full h-full object-cover opacity-30">
-            </div>
 
-            <div class="container px-4 mx-auto relative z-10">
-                <div class="max-w-5xl mx-auto">
+        <section class="py-16 bg-gradient-to-br from-cyan-100 to-white">
+            <div class="container mx-auto px-4 max-w-6xl">
 
-                    <div
-                        class="grid md:grid-cols-3 gap-8 items-center text-center">
-                        <!-- 左側：預約電話提醒 -->
-                        <div class="flex flex-col items-center md:items-end">
-                            <div class="flex items-center gap-3 mb-3">
-                                <svg class="w-12 h-12 text-cyan-800"
-                                    viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                                </svg>
-                                <span
-                                    class="text-lg font-medium text-gray-700">各式鋁門窗，歡迎來電洽詢</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-2 text-cyan-600 font-semibold">
-                                <span>立即撥打</span>
-                                <svg class="w-6 h-6" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- 中間：電話按鈕 -->
-                        <div>
-                            <a href="tel:0919568223"
-                                class="inline-flex items-center gap-4 bg-gray-800 hover:bg-gray-900 text-white font-bold text-2xl sm:text-3xl px-10 py-6 rounded-lg shadow-xl transition transform hover:scale-105">
-                                <svg class="w-10 h-10" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                                </svg>
-                                0938-619-028
-                            </a>
-                        </div>
-
-                        <!-- 右側：LINE 按鈕 -->
-                        <div>
-                            <a href="https://line.me/ti/p/~你的LINE-ID"
-                                target="_blank"
-                                class="inline-flex items-center gap-4 bg-gray-800 hover:bg-gray-900 text-white font-bold text-xl sm:text-2xl px-8 py-6 rounded-lg shadow-xl transition transform hover:scale-105">
-                                <svg class="w-10 h-10" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M19.486 5.256c-2.14-2.137-5.023-3.325-8.008-3.325C5.14 1.93 1.93 6.132 1.93 11.48c0 1.916.667 3.68 1.78 5.07l-1.058 3.895 4.073-1.337c1.33.727 2.8 1.145 4.32 1.145 6.337 0 11.48-4.2 11.48-9.375 0-2.503-1.17-4.855-3.14-6.622zm-8.008 14.18c-1.38 0-2.74-.35-3.92-1.013l-.28-.165-2.447.805.818-2.395-.172-.273c-.717-1.14-1.094-2.46-1.094-3.79 0-4.015 3.64-7.27 8.115-7.27 2.163 0 4.2.843 5.73 2.373 1.53 1.53 2.37 3.57 2.37 5.74 0 4.473-3.64 8.113-8.12 8.113zm4.44-6.063v-.004c-.24-.126-1.42-.7-1.64-.78-.22-.08-.38-.126-.54.125-.16.25-.62.78-.76.94-.14.16-.28.175-.52.06-.24-.126-1.013-.373-1.93-1.19-.71-.632-1.19-1.41-1.33-1.65-.14-.24-.015-.37.105-.49.108-.108.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.126-.54-1.3-.74-1.78-.2-.46-.4-.4-.54-.4-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2 .0 1.18.86 2.32 1.18 2.48.32.16 2.04 1.18 4.24 1.65.52.11 1.18.18 1.58.1.66-.13 1.18-.5 1.34-.94.16-.44.16-.82.11-.9-.04-.08-.16-.126-.36-.252z" />
-                                </svg>
-                                <div class="text-left leading-tight">
-                                    <div class="text-sm opacity-90">LINE
-                                        ID</div>
-                                    <div>歡迎加入</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-cyan-100">
-            <div class="container px-4 mx-auto max-w-6xl">
-                <!-- 標題 -->
                 <h2
-                    class="text-center text-2xl sm:text-3xl font-bold text-cyan-900 mb-10 relative">
+                    class="text-center text-3xl sm:text-4xl font-bold text-cyan-900 mb-16 relative inline-block mx-auto">
                     服務區域
                     <span
-                        class="absolute left-1/2 transform -translate-x-1/2 -bottom-3 w-32 h-0.5 bg-cyan-900"></span>
+                        class="absolute left-1/2 -translate-x-1/2 translate-y-3 bottom-0 w-24 h-1 bg-cyan-600 rounded-full"></span>
                 </h2>
 
-                <div class="flex flex-col lg:flex-row items-start gap-8">
-                    <!-- 左側標籤 -->
+                <!-- 高雄市 -->
+                <div class="flex flex-col lg:flex-row items-start gap-8 mb-12">
                     <div
-                        class="bg-cyan-700 text-white font-bold text-xl px-8 py-6 rounded-lg shadow-lg flex-shrink-0">
+                        class="bg-cyan-700 text-white font-bold text-xl px-8 py-6 rounded-xl shadow-xl flex-shrink-0">
                         高雄市服務
                     </div>
-
-                    <!-- 右側區域列表 -->
                     <div
-                        class="flex-1 bg-white rounded-lg shadow-lg p-8 text-gray-700 leading-relaxed text-base sm:text-lg">
+                        class="flex-1 bg-white rounded-xl shadow-xl p-8 text-gray-700 leading-relaxed">
                         <p class="mb-4">
                             楠梓區／左營區／鼓山區／三民區／苓雅區／新興區／前金區／鹽埕區／前鎮區／旗津區／小港區／鳳山區／鳥松區／大寮區／林園區／仁武區／大社區／岡山區／路竹區／湖內區／茄萣區／永安區／彌陀區／梓官區／橋頭區／燕巢區／田寮區／阿蓮區／大樹區／旗山區／美濃區／六龜區／甲仙區／杉林區／內門區／茂林區／桃源區／那瑪夏區
                         </p>
-                        <p>
-                            我們同時提供<strong
-                                class="text-cyan-700 font-bold">屏東縣、台南市</strong>部分地區服務，歡迎來電詢問！
+                        <p
+                            class="text-cyan-700 font-bold">24小時快速到場，當日丈量、當週報價！</p>
+                    </div>
+                </div>
+
+                <!-- 屏東縣 -->
+                <div class="flex flex-col lg:flex-row items-start gap-8 mb-12">
+                    <div
+                        class="bg-cyan-600 text-white font-bold text-xl px-8 py-6 rounded-xl shadow-xl flex-shrink-0">
+                        屏東縣服務
+                    </div>
+                    <div
+                        class="flex-1 bg-white rounded-xl shadow-xl p-8 text-gray-700 leading-relaxed">
+                        <p class="mb-4">
+                            屏東市／潮州鎮／東港鎮／恆春鎮／枋寮鄉／車城鄉／滿州鄉／琉球鄉／林邊鄉／佳冬鄉／新埤鄉／南州鄉／新園鄉／崁頂鄉／麟洛鄉／九如鄉／里港鄉／鹽埔鄉／高樹鄉／萬丹鄉／長治鄉／內埔鄉／竹田鄉／萬巒鄉／牡丹鄉／獅子鄉／春日鄉／枋山鄉
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- 台南市 -->
+                <div class="flex flex-col lg:flex-row items-start gap-8">
+                    <div
+                        class="bg-cyan-600 text-white font-bold text-xl px-8 py-6 rounded-xl shadow-xl flex-shrink-0">
+                        台南市服務
+                    </div>
+                    <div
+                        class="flex-1 bg-white rounded-xl shadow-xl p-8 text-gray-700 leading-relaxed">
+                        <p class="mb-4">
+                            永康區／仁德區／歸仁區／關廟區／龍崎區／新市區／善化區／安定區／新化區／山上區／左鎮區／南化區／玉井區／楠西區／大內區／西港區／七股區／將軍區／北門區／學甲區／麻豆區／下營區／六甲區／官田區／佳里區／鹽水區／柳營區／後壁區／白河區／東山區／安南區／安平區中西區東區南區北區
                         </p>
                     </div>
                 </div>
 
-                <!-- 行動呼籲（可選加上） -->
-                <div class="text-center mt-12">
-                    <p class="text-xl font-semibold text-cyan-800">
-                        無論您在高雄哪一區，一通電話我們快速到場！
+                <!-- 行動呼籲 -->
+                <div class="text-center mt-16">
+                    <p class="text-2xl font-bold text-cyan-800 mb-6">
+                        不確定您所在區域是否服務？<br class="sm:hidden"> 直接打給我們就對了！
                     </p>
                     <a href="tel:0919568223"
-                        class="inline-block mt-4 bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-2xl px-10 py-4 rounded-full shadow-xl transition transform hover:scale-105">
-                        立即撥打 0919-568-223
+                        class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-2xl px-12 py-5 rounded-full shadow-2xl transform hover:scale-105 transition">
+                        立即撥打 0919-568-223 免費諮詢
                     </a>
                 </div>
+
             </div>
         </section>
+
+        <!-- 右下角固定 LINE 按鈕 -->
+        <div class="fixed bottom-6 right-6 z-50 group">
+            <a href="https://line.me/ti/p/AQo73YIDc9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-16 h-16 sm:w-20 sm:h-20  rounded-full shadow-2xl
+            flex items-center justify-center
+            transition-all duration-300
+            hover:scale-110 hover:shadow-3xl
+
+            animate-bounce-slow">
+
+                <!-- 你提供的 LINE 官方 SVG 圖示 -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md">
+                    <rect width="512" height="512" fill="#00b900" rx="15%" />
+                    <path fill="#fff"
+                        d="M443 231c-2 45-21 76-51 103-53 47-137 105-148 96-11-14 21-47-20-52-88-12-155-74-155-147 0-82 85-150 188-150s189 68 186 150z" />
+                    <path fill="none" stroke="#00b900" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="21"
+                        d="M371 232h-34m34-36h-36v72h36m-123 0v-72l54 72v-72m-89 72v-72m-66 0v72h37" />
+                </svg>
+            </a>
+
+            <!-- 可選：滑過時顯示小提示 -->
+            <div
+                class="absolute bottom-full mb-3 right-0 opacity-0 pointer-events-none
+                  group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                <div
+                    class="bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-xl">
+                    點我加入官方 LINE 詢問
+                    <div
+                        class="absolute bottom-0 right-6 transform translate-y-1/2 rotate-45 w-3 h-3 bg-gray-800"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自訂輕微彈跳動畫（比 animate-bounce 更優雅） -->
+        <style>
+            @keyframes bounce-slow {
+                0%, 100% { transform: translateY(0); }
+                50%      { transform: translateY(-12px); }
+            }
+            .animate-bounce-slow {
+                animation: bounce-slow 3s ease-in-out infinite;
+            }
+        </style>
+        <!-- 右下角固定 LINE 按鈕 -->
+        <div class="fixed bottom-6 right-6 z-50 group">
+            <a href="https://line.me/ti/p/AQo73YIDc9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-16 h-16 sm:w-20 sm:h-20  rounded-full shadow-2xl
+            flex items-center justify-center
+            transition-all duration-300
+            hover:scale-110 hover:shadow-3xl
+
+            animate-bounce-slow">
+
+                <!-- 你提供的 LINE 官方 SVG 圖示 -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md">
+                    <rect width="512" height="512" fill="#00b900" rx="15%" />
+                    <path fill="#fff"
+                        d="M443 231c-2 45-21 76-51 103-53 47-137 105-148 96-11-14 21-47-20-52-88-12-155-74-155-147 0-82 85-150 188-150s189 68 186 150z" />
+                    <path fill="none" stroke="#00b900" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="21"
+                        d="M371 232h-34m34-36h-36v72h36m-123 0v-72l54 72v-72m-89 72v-72m-66 0v72h37" />
+                </svg>
+            </a>
+
+            <!-- 可選：滑過時顯示小提示 -->
+            <div
+                class="absolute bottom-full mb-3 right-0 opacity-0 pointer-events-none
+                  group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                <div
+                    class="bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-xl">
+                    點我加入官方 LINE 詢問
+                    <div
+                        class="absolute bottom-0 right-6 transform translate-y-1/2 rotate-45 w-3 h-3 bg-gray-800"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自訂輕微彈跳動畫（比 animate-bounce 更優雅） -->
+        <style>
+            @keyframes bounce-slow {
+                0%, 100% { transform: translateY(0); }
+                50%      { transform: translateY(-12px); }
+            }
+            .animate-bounce-slow {
+                animation: bounce-slow 3s ease-in-out infinite;
+            }
+        </style>
         <!-- Footer -->
         <footer class="py-8 sm:py-16 bg-cyan-800 text-white">
             <div class="container mx-auto px-4">
@@ -696,14 +754,10 @@
                 <h6 class="text-center text-blue-600 text-sm">2020 © Copyright
                     Heng Yi All rights Reserved.</h6>
             </div>
+
             <script
                 src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-                defer></link>
-            <script>
-                function toggleMenu() {
-                    var navMenu = document.querySelector("#responsive");
-                    navMenu.classList.toggle("hidden");
-                }
+                defer>
             </script>
         </body>
     </html>
