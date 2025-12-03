@@ -9,9 +9,11 @@
         <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500&display=swap"
             rel="stylesheet" />
+
         <script
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer></script>
+
         <link rel="stylesheet" href="output.css">
 
     </head>
@@ -54,15 +56,15 @@
                             <ul x-show="open" x-transition
                                 class="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 z-50">
                                 <li><a href="/product-1-3-1door.html"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">三合一通風門</a></li>
+                                        class="px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">三合一通風門</a></li>
                                 <li><a href="/product-2-main-door.html"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">玄關門</a></li>
+                                        class="px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">玄關門</a></li>
                                 <li><a href="/product-3-window.html"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">氣密窗</a></li>
+                                        class="px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">氣密窗</a></li>
                                 <li><a href="/product-4-fire-door.html"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">防火門</a></li>
+                                        class="px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">防火門</a></li>
                                 <li><a href="/product-5-room-door.html"
-                                        class="block px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">房間金屬門</a></li>
+                                        class="px-6 py-3 hover:bg-teal-50 hover:text-cyan-800">房間金屬門</a></li>
                             </ul>
                         </li>
 
@@ -103,7 +105,7 @@
 
                     <ul class="space-y-1">
                         <li><a href="#" @click="mobileMenu = false"
-                                class="block py-4 text-xl text-gray-700 hover:text-cyan-700">首頁</a></li>
+                                class="py-4 text-xl text-gray-700 hover:text-cyan-700">首頁</a></li>
 
                         <!-- 手機版「所有產品」可展開 -->
                         <li>
@@ -124,24 +126,24 @@
                                 class="bg-gray-50 rounded-lg overflow-hidden ml-4">
                                 <li><a href="/product-1-3-1door.html"
                                         @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">三合一通風門</a></li>
+                                        class="py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">三合一通風門</a></li>
                                 <li><a href="/product-2-main-door.html"
                                         @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">玄關門</a></li>
+                                        class="py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">玄關門</a></li>
                                 <li><a href="/product-3-window.html"
                                         @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">氣密窗</a></li>
+                                        class="py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">氣密窗</a></li>
                                 <li><a href="/product-4-fire-door.html"
                                         @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">防火門</a></li>
+                                        class="py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">防火門</a></li>
                                 <li><a href="/product-5-room-door.html"
                                         @click="mobileMenu = false"
-                                        class="block py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">房間金屬門</a></li>
+                                        class="py-3 px-6 text-gray-600 hover:bg-teal-100 hover:text-cyan-800">房間金屬門</a></li>
                             </ul>
                         </li>
 
                         <li><a href="#聯絡我們" @click="mobileMenu = false"
-                                class="block py-4 text-xl text-gray-700 hover:text-cyan-700">聯絡我們</a></li>
+                                class="py-4 text-xl text-gray-700 hover:text-cyan-700">聯絡我們</a></li>
                     </ul>
                 </div>
             </div>
@@ -155,54 +157,179 @@
             <div class="bg-cyan-800 rounded w-full header-img"></div>
         </header>
 
-        <!-- 7. 電子鎖 -->
-        <section class="py-12 sm:py-20 bg-white">
-            <div class="container px-4 sm:px-0 mx-auto max-w-6xl">
-                <div class="flex justify-center mb-10">
-                    <h3
-                        class="section-heading flex items-baseline text-2xl sm:text-3xl font-bold text-gray-800">
-                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg"
-                            width="40" height="16">
-                            <g fill="#16537e"><path d="M20 0h20v5H20z" /><path
-                                    d="M0 11h40v5H0z" /></g>
-                        </svg>
-                        電子鎖
-                    </h3>
-                </div>
-                <div class="max-w-4xl mx-auto">
+        <main class="min-h-screen">
+            <!-- 三合一通風門 -->
+            <section class="py-12 sm:py-20 bg-white">
+                <div class="container px-4 sm:px-0 mx-auto max-w-6xl">
+                    <div class="flex justify-center mb-10">
+                        <h3
+                            class="section-heading flex items-baseline text-2xl sm:text-3xl font-bold text-gray-800">
+                            <svg class="mr-3" xmlns="http://www.w3.org/2000/svg"
+                                width="40" height="16">
+                                <g data-name="Group 32">
+                                    <g data-name="Group 31" fill="#16537e">
+                                        <path d="M20 0h20v5H20z" />
+                                        <path d="M0 11h40v5H0z" />
+                                    </g>
+                                </g>
+                            </svg>
+                            高雄市鳳山區三合一通風門
+                        </h3>
+                    </div>
 
-                    <div>
-                        <div><h4
-                                class="text-xl sm:text-2xl font-bold text-cyan-800 mb-4">產品介紹</h4><p
-                                class="text-gray-700 leading-relaxed text-base sm:text-lg">電子鎖（智能門鎖）是無鑰匙解鎖裝置，利用指紋、密碼、卡片或App控制，取代傳統鎖頭。主要用於住宅大門，提升便利與安全，支援開鎖記錄與警報，適合智慧家庭。</p></div>
-                        <div><h4
-                                class="text-xl sm:text-2xl font-bold text-cyan-800 my-6">產品特色</h4><div
-                                class="grid sm:grid-cols-2 gap-6">
-                                <div class="flex"><div
-                                        class="flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">1</div><div
-                                        class="ml-4"><h5
-                                            class="font-semibold text-gray-800">多解鎖方式</h5><p
-                                            class="text-gray-600 mt-1">指紋、密碼、NFC卡、App遠端，虛位密碼防偷窺。</p></div></div>
-                                <div class="flex"><div
-                                        class="flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">2</div><div
-                                        class="ml-4"><h5
-                                            class="font-semibold text-gray-800">高安全性</h5><p
-                                            class="text-gray-600 mt-1">生物辨識難複製，入侵警報與低電提醒。</p></div></div>
-                                <div class="flex"><div
-                                        class="flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">3</div><div
-                                        class="ml-4"><h5
-                                            class="font-semibold text-gray-800">自動上鎖</h5><p
-                                            class="text-gray-600 mt-1">關門後自動鎖定，忘鎖無憂。</p></div></div>
-                                <div class="flex"><div
-                                        class="flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">4</div><div
-                                        class="ml-4"><h5
-                                            class="font-semibold text-gray-800">易安裝</h5><p
-                                            class="text-gray-600 mt-1">適用40-50mm門厚，電池供電1-2年。</p></div></div>
-                            </div></div>
+                    <div class="max-w-4xl mx-auto">
+                        <!-- 產品介紹 -->
+                        <div>
+                            <h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 mb-4">產品介紹</h4>
+                            <p
+                                class="text-gray-700 leading-relaxed text-base sm:text-lg">
+                                三合一通風門是一種多功能複合門，將玻璃門、紗窗和防盜格柵整合於單一門扇，主要用於廚房、陽台或浴室等需通風空間。它結合鋁合金材質，透過上下推拉內扇調整通風量，解決傳統雙門占用空間及不便的問題，同時具備防蚊、防蟲、防盜及輕微氣密效果，適合現代家庭提升便利性與安全性。
+                            </p>
+
+                            <p>如果您正住在鳳山區，正在煩惱<br>
+                                「家裡太吵、冷氣一直漏、窗戶老舊漏風、下雨就濕答答」<br>
+                                恭喜您找到對的人了！<br><br>
+                                恆易在鳳山深耕超過10年，從五甲、青年路、文山特區、鳳山車站周邊。</p>
+                        </div>
+
+                        <!-- 4個產品特色 -->
+                        <div>
+                            <h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 my-6">產品特色</h4>
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="flex">
+                                    <div
+                                        class="flex-shrink-0 flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                                    <div class="ml-4">
+                                        <h5
+                                            class="font-semibold text-gray-800">節省空間</h5>
+                                        <p
+                                            class="text-gray-600 mt-1">單一門扇取代傳統紗門與玻璃門的雙重設計，開關更順暢，不佔用室內動線。</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div
+                                        class="flex-shrink-0 flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                                    <div class="ml-4">
+                                        <h5
+                                            class="font-semibold text-gray-800">多功能調整</h5>
+                                        <p
+                                            class="text-gray-600 mt-1">內扇可三段上下滑動，精準控制通風量，兼顧採光與空氣對流，無需全開門。</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div
+                                        class="flex-shrink-0 flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                                    <div class="ml-4">
+                                        <h5
+                                            class="font-semibold text-gray-800">防蚊防盜</h5>
+                                        <p
+                                            class="text-gray-600 mt-1">整合紗網與格柵，提供完整防蟲及防盜效果，內建防夾手設計，拉動輕盈安全。</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div
+                                        class="flex-shrink-0 flex-shrink-0 w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                                    <div class="ml-4">
+                                        <h5
+                                            class="font-semibold text-gray-800">美觀實用</h5>
+                                        <p
+                                            class="text-gray-600 mt-1">樣式簡約時尚，可客製顏色與尺寸，氣密條提升防塵效果，適合各種室內風格。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 常見問題（手風琴式） -->
+                        <div>
+                            <h4
+                                class="text-xl sm:text-2xl font-bold text-cyan-800 my-6">常見問題</h4>
+                            <div class="space-y-4">
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer">
+                                    <summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">
+                                        安裝價格多少？
+                                        <svg
+                                            class="w-5 h-5 transform transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg>
+                                    </summary>
+                                    <p
+                                        class="mt-3 text-gray-600">標準尺寸（寬90cm×高210cm）約2-4萬元，視材質、尺寸及品牌而定；客製化會增加費用，建議現場丈量以獲準確報價。</p>
+                                </details>
+
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer">
+                                    <summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">
+                                        會不會漏水或不隔音？
+                                        <svg
+                                            class="w-5 h-5 transform transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg>
+                                    </summary>
+                                    <p
+                                        class="mt-3 text-gray-600">具微氣密設計，能防小雨滲水，但非專業隔音門；若需高隔音，建議搭配複層玻璃，安裝時確保門檻密封。</p>
+                                </details>
+
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer">
+                                    <summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">
+                                        耐用度如何？
+                                        <svg
+                                            class="w-5 h-5 transform transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg>
+                                    </summary>
+                                    <p
+                                        class="mt-3 text-gray-600">鋁合金材質耐腐蝕，使用壽命長，但需定期清潔紗網；避免強風下強拉，內扇滑動機制經測試可達10萬次以上。</p>
+                                </details>
+
+                                <details
+                                    class="bg-gray-50 rounded-lg px-6 py-4 cursor-pointer">
+                                    <summary
+                                        class="font-semibold text-gray-800 flex justify-between items-center">
+                                        適合哪種空間？
+                                        <svg
+                                            class="w-5 h-5 transform transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7" /></svg>
+                                    </summary>
+                                    <p
+                                        class="mt-3 text-gray-600">最適合陽台或廚房門，若用於主入口，建議升級防盜等級；舊屋更換需確認門洞尺寸。</p>
+                                </details>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- 如果你之後要加其他產品，直接複製上面整個 <section> 區塊，改標題與內容即可 -->
+        </main>
 
         <!-- 施工照片 -->
         <section class="py-8 sm:py-16 bg-gray-200">
@@ -225,29 +352,17 @@
                 <div
                     class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mb-6">
                     <!-- Create links -->
-                    <a data-fslightbox="gallery" href="./img/電子鎖-1.jpg"
+                    <a data-fslightbox="gallery" href="./img/三合一通風門-1.jpg"
                         class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-1.jpg" alt="電子鎖-1">
+                        <img src="./img/三合一通風門-1.jpg" alt="三合一通風門-1">
                     </a>
-                    <a data-fslightbox="gallery" href="./img/電子鎖-2.jpg"
+                    <a data-fslightbox="gallery" href="./img/三合一通風門-2.jpg"
                         class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-2.jpg" alt="電子鎖-2">
+                        <img src="./img/三合一通風門-2.jpg" alt="三合一通風門-2">
                     </a>
-                    <a data-fslightbox="gallery" href="./img/電子鎖-3.jpg"
+                    <a data-fslightbox="gallery" href="./img/三合一通風門-3.jpg"
                         class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-3.jpg" alt="電子鎖-3">
-                    </a>
-                    <a data-fslightbox="gallery" href="./img/電子鎖-4.jpg"
-                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-4.jpg" alt="電子鎖-4">
-                    </a>
-                    <a data-fslightbox="gallery" href="./img/電子鎖-5.jpg"
-                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-5.jpg" alt="電子鎖-5">
-                    </a>
-                    <a data-fslightbox="gallery" href="./img/電子鎖-6.jpg"
-                        class=" flex rounded-md overflow-hidden hover:opacity-80 transition-opacity">
-                        <img src="./img/電子鎖-6.jpg" alt="電子鎖-6">
+                        <img src="./img/三合一通風門-3.jpg" alt="三合一通風門-3">
                     </a>
                 </div>
             </div>
@@ -258,7 +373,7 @@
             <a href="https://line.me/ti/p/AQo73YIDc9"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="block w-16 h-16 sm:w-20 sm:h-20  rounded-full shadow-2xl
+                class="w-16 h-16 sm:w-20 sm:h-20  rounded-full shadow-2xl
             flex items-center justify-center
             transition-all duration-300
             hover:scale-110 hover:shadow-3xl
@@ -302,7 +417,7 @@
             }
         </style>
         <!-- Footer -->
-        <footer class="py-8 sm:py-16 bg-gray-800 text-white">
+        <footer class="py-8 sm:py-16 bg-cyan-900 text-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap mx-0 sm:-mx-6">
                     <div class="w-full sm:w-6/12 px-0 sm:px-6">
@@ -381,7 +496,6 @@
                 <h6 class="text-center text-blue-600 text-sm">2020 © Copyright
                     Heng Yi All rights Reserved.</h6>
             </div>
-
             <script
                 src="https://cdn.jsdelivr.net/npm/fslightbox@3.7.4/index.min.js"></script>
         </body>
